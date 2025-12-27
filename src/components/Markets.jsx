@@ -12,15 +12,15 @@ const Markets = () => {
   const [activeTab, setActiveTab] = useState('Markets');
 
   return (
-    <div className="p-8 bg-gray-50 min-h-screen font-sans">
+    <div className="pt-8 px-32 bg-gray-50 min-h-screen font-sans">
       {/* Header Section */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-emerald-500">Markets</h1>
-        <p className="text-gray-500">Quick market trading with immediate returns</p>
+        <p className="text-gray-500 font-semibold">Quick market trading with immediate returns</p>
       </div>
 
       {/* Main Container */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+      <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6">
         
         {/* Navigation Tabs */}
         <div className="flex justify-center mb-8">
@@ -54,7 +54,7 @@ const Markets = () => {
         {/* Crypto Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {marketData.map((coin) => (
-            <div key={coin.id} className="border border-gray-200 rounded-2xl p-5 hover:border-emerald-200 transition-colors">
+            <div key={coin.id} className="border shadow-md border-gray-200 rounded-xl p-5 hover:border-emerald-200 transition-colors">
               <div className="flex justify-between items-start mb-6">
                 <div className="flex gap-3 items-center">
                   <div className={`w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-bold ${coin.color}`}>
@@ -68,30 +68,30 @@ const Markets = () => {
                 <Star className="w-5 h-5 text-gray-300 cursor-pointer hover:text-yellow-400" />
               </div>
 
-              <div className="grid grid-cols-2 gap-y-4 mb-6">
+              <div className="grid grid-cols-2 text-gray-700 font-sans gap-y-8 mb-6">
                 <div>
-                  <p className="text-xs text-gray-400">Price</p>
-                  <p className="font-bold">{coin.price}</p>
+                  <p className="text-xs font-semibold text-gray-400">Price</p>
+                  <p className="text-sm font-bold">{coin.price}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400">24h Change</p>
-                  <p className="font-semibold text-red-500">{coin.change}</p>
+                  <p className="text-xs font-semibold text-gray-400">24h Change</p>
+                  <p className="text-sm font-bold text-red-500">{coin.change}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400">24h High</p>
-                  <p className="font-semibold">{coin.high}</p>
+                  <p className="text-xs font-semibold text-gray-400">24h High</p>
+                  <p className="text-sm font-bold">{coin.high}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400">24h Volume</p>
-                  <p className="font-semibold">{coin.volume}</p>
+                  <p className="text-xs font-semibold text-gray-400">24h Volume</p>
+                  <p className="text-sm font-bold">{coin.volume}</p>
                 </div>
               </div>
 
               <div className="flex gap-3">
-                <button className="flex-1 bg-emerald-100 text-emerald-600 py-2 rounded-lg font-bold flex items-center justify-center gap-1 hover:bg-emerald-200 transition-colors">
+                <button className="flex-1 bg-emerald-300 text-emerald-600 py-2 rounded-lg font-bold flex items-center justify-center gap-1 hover:bg-emerald-200 transition-colors">
                   <ArrowUp size={16} /> Buy
                 </button>
-                <button className="flex-1 bg-red-100 text-red-500 py-2 rounded-lg font-bold flex items-center justify-center gap-1 hover:bg-red-200 transition-colors">
+                <button className="flex-1 bg-red-200 text-red-500 py-2 rounded-lg font-bold flex items-center justify-center gap-1 hover:bg-red-200 transition-colors">
                   <ArrowDown size={16} /> Sell
                 </button>
               </div>

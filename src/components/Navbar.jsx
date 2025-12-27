@@ -16,13 +16,12 @@ function Navbar() {
       {/* Middle: Links */}
       <div className="flex items-center gap-6">
         <Link
-          to="/dashboard"
-          className="flex items-center gap-1 text-white bg-green-500 px-3 py-1 rounded font-semibold hover:bg-green-600"
+          to="/Dashboard"
+          className="flex items-center gap-1 text-white bg-green-500 px-3 py-2 rounded font-semibold hover:bg-green-600"
         >
-          <span className="material-icons">home</span>
           Dashboard
         </Link>
-        <Link to="/markets" className="text-gray-700 hover:text-green-500 font-medium">
+        <Link to="/Markets" className="text-gray-700 hover:text-green-500 font-medium">
           Markets
         </Link>
         <Link to="/spot-trading" className="text-gray-700 hover:text-green-500 font-medium">
@@ -31,7 +30,7 @@ function Navbar() {
         <Link to="/futures" className="text-gray-700 hover:text-green-500 font-medium">
           Futures
         </Link>
-        <Link to="/bots" className="text-gray-700 hover:text-green-500 font-medium">
+        <Link to="/Bots" className="text-gray-700 hover:text-green-500 font-medium">
           Bots
         </Link>
         <div className="relative group">
